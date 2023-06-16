@@ -1,15 +1,11 @@
-import SiteLayout from './components/Layout';
-import Login from './pages/Login';
+import { BrowserRouter as Router, } from "react-router-dom";
+import { ProjectRoutes } from "./components/ProjectRoutes/Routes";
+
 
 const App = () => (
-  <>
-    <SiteLayout
-      header={<span>Тут будет название проекта</span>}
-      content={<Login />}
-      footer={<span>(c) Starter</span>}
-    />
-    
-  </>
+  <Router>
+    <ProjectRoutes />
+  </Router>
 )
 
 export default App
