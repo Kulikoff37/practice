@@ -1,1 +1,3 @@
-export const Guest = () => <p>It is guest page</p>;
+import Guest from "./Guest";
+
+export default Guest;

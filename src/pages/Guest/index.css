@@ -1,0 +1,15 @@
+.lime-tag {
+    background-color: #CEFF0A;
+    color           : #000000;
+    border-color    : #979797;
+}
+
+.gray-tag {
+    background-color: #A0A0A0;
+    color           : #fff;
+    border-color    : #979797;
+}
+
+.gray-divider {
+    border-color: #979797;
+}
