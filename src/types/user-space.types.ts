@@ -20,8 +20,6 @@ export interface ISpace {
   images: string[];
   /*Описание*/
   description: string;
-  /*Версии пространства*/
-  versions: IVersion[];
   /*Разделы пространства*/
   sections: ISection[];
 }
@@ -38,10 +36,15 @@ interface ISection {
   files: IFile[];
 }
 
+interface ITag {
+  color: string;
+  content: string;
+}
+
 /*Фаил*/
 interface IFile {
   /*Тэг*/
-  tag?: string;
+  tag?: ITag;
   /*Название файла*/
   name: string | number;
   /*Комментарий*/
