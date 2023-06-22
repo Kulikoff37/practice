@@ -38,15 +38,16 @@ const Guest: React.FC = () => {
 
     return (
         <div>
-            <Space style={{ alignItems: 'left', width: '100%' }}>
+            <Space className='badge'>
                 <Image
                     preview={false}
                     src='/src/pages/Guest/static/badge.svg'
                 />
                 <Title>ISAFSB</Title>
             </Space>
+            <Divider className='divider' />
             <div>
-                <Carousel afterChange={onChange}>
+                <Carousel className='carousel' afterChange={onChange}>
                     <div>
                         <img src="src/pages/Guest/static/carousel/img1.svg" alt="" />
                     </div>
@@ -62,94 +63,126 @@ const Guest: React.FC = () => {
                         <Space split={<Divider className='gray-divider' type='vertical' />}>
                             <div>1.07.10</div>
                             <Dropdown menu={{ items }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <div>...</div>
+                                <div className='dots'>. . .</div>
                             </Dropdown>
 
                         </Space>
                     </Tag>
+                    <Tag bordered={false} className='date-tag'>дата</Tag>
+                    <Tag bordered={false} className='blue-tag'>7.02.2023</Tag>
                 </Space>
             </div >
             <div>
-                <Paragraph>
+                <Paragraph className='paragraph'>
                     Обновлен сертификат, mobile-provision profile
                 </Paragraph>
-                <Paragraph>
+                <Paragraph className='paragraph'>
                     Что нового:
                     <ul>
                         <li>
-                            - обновлена система безопасности
+                            обновлена система безопасности
                         </li>
                         <li>
-                            - устранена ошибка: падение при выборе ключа в выпадающем списке
+                            устранена ошибка: падение при выборе ключа в выпадающем списке
                         </li>
                         <li>
-                            - изменен дизайн панели выбора
+                            изменен дизайн панели выбора
                         </li>
                     </ul>
                 </Paragraph>
             </div>
             <div>
-                <Title level={2}>Файлы</Title>
+                <Title className='title' level={2}>Файлы</Title>
                 <div>
-                    <Title level={3}>Linux</Title>
-                    <Paragraph>
+                    <Title className='title' level={3}>Linux</Title>
+                    <Divider className='divider' />
+                    <Paragraph className='paragraph'>
                         Версия для Linux может быть установлена в любую папку Вашего домашнего каталога. Не рекомендуется ставить
                         приложение в катаолог /opt
                         Подробная инструкция по установке находится в архиве ‘documentation.zip’, в ‘readme.txt’
                     </Paragraph>
-                    <div>
+                    <Divider className='divider' />
+                    <Space direction='vertical'>
+                        <Space direction='horizontal' className='files'>
+                            <Space direction='horizontal' className='files-deep'>
+                                <Tag className='a-tag'>A</Tag>
+                                <Paragraph className='paragraph'>application_files_backend.zip</Paragraph>
+                                <Paragraph className='paragraph'>файлы для установки backend</Paragraph>
+                                <Paragraph className='paragraph'>147.7 Mb</Paragraph>
+                            </Space>
+                        </Space>
+                        <Space direction='horizontal' className='files'>
+                            <Space direction='horizontal' className='files-deep'>
+                                <Tag className='a-tag'>A</Tag>
+                                <Paragraph className='paragraph'>application_files_frontend.zip</Paragraph>
+                                <Paragraph className='paragraph'>статики frontend</Paragraph>
+                                <Paragraph className='paragraph'>40.1 Mb</Paragraph>
+                            </Space>
+                        </Space>
+                        <Space direction='horizontal' className='files'>
+                            <Space direction='horizontal' className='files-deep'>
+                                <Tag className='d-tag'>D</Tag>
+                                <Paragraph className='paragraph'>documentation.zip</Paragraph>
+                                <Paragraph className='paragraph'>инструкция по установке, рук. пользователя и пр…</Paragraph>
+                                <Paragraph className='paragraph'>8.1 Mb</Paragraph>
+                            </Space>
+                        </Space>
+                        <Space direction='horizontal' className='files'>
+                            <Tag className='m-tag'>M</Tag>
+                            <Paragraph className='paragraph'>разное.zip</Paragraph>
+                        </Space>
+                    </Space>
+                    <Divider className='divider' />
+                    <div className='button'>
                         <div>
-                            <Tag>A</Tag>
-                            <Paragraph>application_files_backend.zip</Paragraph>
-                            <Paragraph>файлы для установки backend</Paragraph>
-                            <Paragraph>147.7 Mb</Paragraph>
                         </div>
                         <div>
-                            <Tag>A</Tag>
-                            <Paragraph>application_files_frontend.zip</Paragraph>
-                            <Paragraph>статики frontend</Paragraph>
-                            <Paragraph>40.1 Mb</Paragraph>
-                        </div>
-                        <div>
-                            <Tag>D</Tag>
-                            <Paragraph>documentation.zip</Paragraph>
-                            <Paragraph>инструкция по установке, рук. пользователя и пр…</Paragraph>
-                            <Paragraph>8.1 Mb</Paragraph>
-                        </div>
-                        <div>
-                            <Tag>M</Tag>
-                            <Paragraph>разное.zip</Paragraph>
+                            <Button>Загрузить одним архивом</Button>
                         </div>
                     </div>
-                    <Button>Загрузить одним архивом</Button>
                 </div>
                 <div>
-                    <Title level={3}>Windows Server</Title>
-                    <div>
+                    <Title className='title' level={3}>Windows Server</Title>
+                    <Divider className='divider' />
+                    <Space direction='vertical'>
+                        <Space direction='horizontal' className='files'>
+                            <Space direction='horizontal' className='files-deep'>
+                                <Tag className='a-tag'>A</Tag>
+                                <Paragraph className='paragraph'>application_files_backend_win.zip</Paragraph>
+                                <Paragraph className='paragraph'>файлы для установки backend</Paragraph>
+                                <Paragraph className='paragraph'>147.7 Mb</Paragraph>
+                            </Space>
+                        </Space>
+                        <Space direction='horizontal' className='files'>
+                            <Space direction='horizontal' className='files-deep'>
+                                <Tag className='a-tag'>A</Tag>
+                                <Paragraph className='paragraph'>application_files_frontend_win.zip</Paragraph>
+                                <Paragraph className='paragraph'>статики frontend</Paragraph>
+                                <Paragraph className='paragraph'>40.1 Mb</Paragraph>
+                            </Space>
+                        </Space>
+                        <Space direction='horizontal' className='files'>
+                            <Space direction='horizontal' className='files-deep'>
+                                <Tag className='d-tag'>D</Tag>
+                                <Paragraph className='paragraph'>documentation_win.zip</Paragraph>
+                                <Paragraph className='paragraph'>инструкция по установке, рук. пользователя и пр…</Paragraph>
+                                <Paragraph className='paragraph'>8.1 Mb</Paragraph>
+                            </Space>
+                        </Space>
+                        <Space direction='horizontal' className='files'>
+                            <Tag className='m-tag'>M</Tag>
+                            <Paragraph className='paragraph'>разное_win.zip</Paragraph>
+                        </Space>
+                    </Space>
+                    <Divider className='divider' />
+                    <div className='button'>
                         <div>
-                            <Tag>A</Tag>
-                            <Paragraph>application_files_backend_win.zip</Paragraph>
-                            <Paragraph>файлы для установки backend</Paragraph>
-                            <Paragraph>147.7 Mb</Paragraph>
                         </div>
                         <div>
-                            <Tag>A</Tag>
-                            <Paragraph>application_files_frontend_win.zip</Paragraph>
-                            <Paragraph>статики frontend</Paragraph>
-                            <Paragraph>40.1 Mb</Paragraph>
-                        </div>
-                        <div>
-                            <Tag>D</Tag>
-                            <Paragraph>documentation_win.zip</Paragraph>
-                            <Paragraph>инструкция по установке, рук. пользователя и пр…</Paragraph>
-                            <Paragraph>8.1 Mb</Paragraph>
-                        </div>
-                        <div>
-                            <Tag>M</Tag>
-                            <Paragraph>разное_win.zip</Paragraph>
+                            <Button>Загрузить одним архивом</Button>
                         </div>
                     </div>
-                    <Button>Загрузить одним архивом</Button>
+
                 </div>
             </div>
 

@@ -2,14 +2,104 @@
     background-color: #CEFF0A;
     color           : #000000;
     border-color    : #979797;
+
 }
 
 .gray-tag {
     background-color: #A0A0A0;
     color           : #fff;
     border-color    : #979797;
+    width           : 150px;
+    text-align      : center;
 }
 
 .gray-divider {
     border-color: #979797;
+}
+
+.carousel {
+    padding: 0px 500px 0px 500px;
+}
+
+.badge {
+    text-align  : unset !important;
+    align-items : start;
+    width       : 100%;
+    padding-left: 60px;
+}
+
+.divider {}
+
+.dots {
+    align-items   : center;
+    text-align    : center;
+    vertical-align: middle;
+}
+
+li::marker {
+    content: '-';
+}
+
+.paragraph {
+    text-align  : start;
+    padding-left: 60px;
+}
+
+.title {
+    text-align  : start;
+    padding-left: 60px;
+}
+
+.files {
+    margin-bottom: 10px;
+    text-align   : start;
+    align-items  : unset;
+    padding-left : 60px;
+}
+
+.files-deep {
+    border-bottom: solid 1px black;
+    border-color : #D6D6D6;
+}
+
+div:where(.css-dev-only-do-not-override-12jzuas).ant-typography,
+:where(.css-dev-only-do-not-override-12jzuas).ant-typography p {
+    margin-bottom: unset !important;
+}
+
+.a-tag {
+    background-color: #0969DA;
+    color           : #C1DEFF;
+    border-color    : #979797;
+}
+
+.d-tag {
+    background-color: #0A9E21;
+    color           : #A4EEB0;
+    border-color    : #979797;
+}
+
+.m-tag {
+    background-color: #979797;
+    color           : #F8F8F8;
+    border-color    : #C8C8C8;
+}
+
+.button {
+    display        : flex;
+    justify-content: space-between;
+    text-align     : end;
+    width          : 100%;
+}
+
+.blue-tag {
+    background-color: #61EFF3;
+    color           : #000000;
+    border-color    : #979797;
+}
+
+.date-tag {
+    background-color: #A0A0A0;
+    color           : #fff;
+    border-color    : #979797;
 }

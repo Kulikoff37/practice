@@ -11,8 +11,16 @@ const docStyle: React.CSSProperties = {
     textAlign: 'end',
 };
 
+const footerStyle: React.CSSProperties = {
+    width: '100%',
+    justifyContent: 'space-between',
+    color: '#57606A',
+    fontSize: '12',
+    padding: '10px'
+}
+
 const Footer: React.FC = () => (
-    <Space direction="horizontal" style={{ width: '100%' }}>
+    <Space direction="horizontal" style={footerStyle}>
         <Text style={nameStyle}>
             (c) Parma TG, 2023
         </Text>

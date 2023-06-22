@@ -6,17 +6,26 @@ const { Header, Content } = Layout;
 
 const headerStyle: React.CSSProperties = {
   textAlign: 'left',
-  fontSize: '24px',
+  fontSize: '14px',
   lineHeight: 'unset',
   height: 'auto',
   color: '#979797',
   backgroundColor: '#fff',
+  verticalAlign: 'middle',
 };
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
   height: 'calc(100vh - 64px)',
   backgroundColor: '#fff',
+};
+
+const headerSpaceStyle: React.CSSProperties = {
+  border: 'solid 1px',
+  borderColor: '#979797',
+  width: '100%',
+  margin: '10px',
+  padding: '5px',
 };
 
 interface ISiteLayout {
@@ -27,9 +36,10 @@ const SiteLayout: React.FC<ISiteLayout> = ({ header }) => (
   <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
     <Layout>
       <Header style={headerStyle}>
-        <Image preview={false} src='/src/components/Layout/static/logo.svg' />
-        <div style={{}}>{header}</div>
-
+        <Space style={headerSpaceStyle}>
+          <Image preview={false} src='/src/components/Layout/static/logo.svg' />
+          <div>{header}</div>
+        </Space>
       </Header>
       <Content style={contentStyle}>
         <Outlet />
