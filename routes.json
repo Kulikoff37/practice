@@ -1,5 +1,6 @@
 {
   "/api/*": "/$1",
   "/scope/guest": "/scope",
-  "/scope/guest/folders": "/folders"
+  "/scope/guest/folders": "/folders",
+  "/auth": "/auth"
 }

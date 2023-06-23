@@ -2,16 +2,14 @@ import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
+import { ICredentials } from '../../types/credentials.types';
+import { useLoginStore } from './store';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-    navigate('/guest');
-  };
-  
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
+  const { sendCredentials }  = useLoginStore();
+  const onFinish = (values: ICredentials) => {
+    sendCredentials(values, navigate);
   };
 
   return (
@@ -24,7 +22,6 @@ const Login: React.FC = () => {
           style={{ width: 600 }}
           initialValues={{ remember: true }}
           onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
         <Form.Item

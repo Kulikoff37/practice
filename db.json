@@ -26,5 +26,10 @@
       "label": "1.9.7",
       "date": "20.08.2022"
     }
-  ]
+  ],
+  "auth": {
+    "username": "kjkjk",
+    "password": "jkjkjkjk",
+    "remember": true
+  }
 }
