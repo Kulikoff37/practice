@@ -1,3 +1,27 @@
+
+
+#root{
+  font-family:Arial, Helvetica, sans-serif ;
+  
+}
+*{
+  margin:0 ;
+  padding: 0;
+  font-family:Arial, Helvetica, sans-serif ;
+}
+#root .ant-typography {
+  color: #ec1c24;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 46px;
+}
+#root .ant-form-item {
+  width: 100%;
+}
+
+
 .center-form {
   display: flex;
   flex-direction: column;
@@ -5,3 +29,45 @@
   align-items: center;
   height: 100%;
 }
+.ant-form{
+  width: 426px;
+  height:476px; 
+  border: 1px solid #979797;
+  border-radius: 10px;
+}
+
+
+#root .ant-btn-primary{
+  font-size: 16px;
+
+}
+
+
+
+#root .ant-btn-link{
+  color:black;
+  
+}
+
+.shadow{
+   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); 
+  border-radius:10px;
+}
+
+
+
+#root .ant-row{
+  align-items: center;
+}
+
+#root .checkbox .ant-row{
+  align-items: flex-start;
+}
+#root .checkbox {
+  margin-bottom: 10px;
+  margin-top: 70px;
+}
+
+
+
+
