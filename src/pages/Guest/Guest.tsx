@@ -1,4 +1,7 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { shallow } from 'zustand/shallow';
+import { useUserSpace } from './store';
 import { Image, Typography, Carousel, Space, Tag, Button, Divider, Dropdown, MenuProps } from 'antd';
 import './index.css'
 
@@ -32,27 +35,35 @@ const items: MenuProps['items'] = [
 ];
 
 const Guest: React.FC = () => {
+    const { space, fetchSpace } = useUserSpace(state => state, shallow);
+    useEffect(() => { fetchSpace() }, []);
+
     const onChange = (currentSlide: number) => {
         console.log(currentSlide);
     };
 
     return (
         <div>
+            <div style={{ textAlign: 'left' }}>
+                <pre>
+                    {JSON.stringify(space, null, 2)}
+                </pre>
+            </div>
             <Space className='badge'>
                 <Image
                     preview={false}
-                    src='/src/pages/Guest/static/badge.svg'
+                    src={'/src/pages/Guest/static/badge.svg'}
                 />
-                <Title>ISAFSB</Title>
+                <Title>{space?.name}</Title>
             </Space>
             <Divider className='divider' />
             <div>
                 <Carousel className='carousel' afterChange={onChange}>
                     <div>
-                        <img src="src/pages/Guest/static/carousel/img1.svg" alt="" />
+                        <img src={space?.images[0]} alt="" />
                     </div>
                     <div>
-                        <img src="src/pages/Guest/static/carousel/img2.svg" alt="" />
+                        <img src={space?.images[1]} alt="" />
                     </div>
                 </Carousel>
             </div>
