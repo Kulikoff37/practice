@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { shallow } from 'zustand/shallow';
 import { useUserSpace } from './store';
+import { EllipsisOutlined } from '@ant-design/icons';
 import { Image, Typography, Carousel, Space, Tag, Button, Divider, Dropdown, MenuProps } from 'antd';
 import './index.css'
 
@@ -43,51 +44,59 @@ const Guest: React.FC = () => {
     };
 
     return (
-        <div>
-            <div style={{ textAlign: 'left' }}>
+        <Space direction='vertical' className='content'>
+            {/* <div style={{ textAlign: 'left' }}>
                 <pre>
                     {JSON.stringify(space, null, 2)}
                 </pre>
-            </div>
-            <Space className='badge'>
+            </div> */}
+            <div className='badge'>
                 <Image
                     preview={false}
                     src={'/src/pages/Guest/static/badge.svg'}
                 />
-                <Title>{space?.name}</Title>
-            </Space>
-            <Divider className='divider' />
-            <div>
-                <Carousel className='carousel' afterChange={onChange}>
-                    <div>
-                        <img src={space?.images[0]} alt="" />
-                    </div>
-                    <div>
-                        <img src={space?.images[1]} alt="" />
-                    </div>
-                </Carousel>
+                <div className='top-title'>
+                    <Title className='title-company-name'>{space?.name}</Title>
+                </div>
+
             </div>
-            <div>
+            <Divider className='divider' />
+            <div className='top-carousel'>
+                <div className='carousel'>
+                    <Carousel afterChange={onChange}>
+                        <div>
+                            <img src={space?.images[0]} alt="" />
+                        </div>
+                        <div>
+                            <img src={space?.images[1]} alt="" />
+                        </div>
+                    </Carousel>
+                </div>
+            </div>
+
+            <div className='versions-tags-box'>
                 <Tag bordered={false} className='gray-tag'>текущая версия</Tag>
+
                 <Space size={[0, 'small']} wrap>
                     <Tag bordered={false} className='lime-tag'>
-                        <Space split={<Divider className='gray-divider' type='vertical' />}>
+                        <Space split={<Divider className='gray-divider' type='vertical' />} style={{ gap: '0px' }}>
                             <div>1.07.10</div>
                             <Dropdown menu={{ items }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <div className='dots'>. . .</div>
+                                <EllipsisOutlined className='dots' />
                             </Dropdown>
 
                         </Space>
                     </Tag>
-                    <Tag bordered={false} className='date-tag'>дата</Tag>
-                    <Tag bordered={false} className='blue-tag'>7.02.2023</Tag>
+                    <Space className='tags-separator'>
+                        <Tag className='date-tag'>дата</Tag>
+                        <Tag className='blue-tag'>7.02.2023</Tag>
+                    </Space>
+
                 </Space>
             </div >
-            <div>
-                <Paragraph className='paragraph'>
+            <div className='commentaries-box '>
+                <Paragraph className='paragraph-space-commentary'>
                     Обновлен сертификат, mobile-provision profile
-                </Paragraph>
-                <Paragraph className='paragraph'>
                     Что нового:
                     <ul>
                         <li>
@@ -102,18 +111,21 @@ const Guest: React.FC = () => {
                     </ul>
                 </Paragraph>
             </div>
-            <div>
-                <Title className='title' level={2}>Файлы</Title>
+            <div className='files-components'>
+                <Title className='title-files'>Файлы</Title>
                 <div>
-                    <Title className='title' level={3}>Linux</Title>
+                    <Title className='title-files-system '>Linux</Title>
                     <Divider className='divider' />
-                    <Paragraph className='paragraph'>
-                        Версия для Linux может быть установлена в любую папку Вашего домашнего каталога. Не рекомендуется ставить
-                        приложение в катаолог /opt
-                        Подробная инструкция по установке находится в архиве ‘documentation.zip’, в ‘readme.txt’
-                    </Paragraph>
+                    <div className='top-paragraph-files-commentary'>
+                        <Paragraph className='paragraph-files-commentary'>
+                            Версия для Linux может быть установлена в любую папку Вашего домашнего каталога. Не рекомендуется ставить
+                            приложение в катаолог /opt
+                            Подробная инструкция по установке находится в архиве ‘documentation.zip’, в ‘readme.txt’
+                        </Paragraph>
+                    </div>
+
                     <Divider className='divider' />
-                    <Space direction='vertical'>
+                    <Space direction='vertical' className='files-divider-space'>
                         <Space direction='horizontal' className='files'>
                             <Space direction='horizontal' className='files-deep'>
                                 <Tag className='a-tag'>A</Tag>
@@ -122,6 +134,7 @@ const Guest: React.FC = () => {
                                 <Paragraph className='paragraph'>147.7 Mb</Paragraph>
                             </Space>
                         </Space>
+
                         <Space direction='horizontal' className='files'>
                             <Space direction='horizontal' className='files-deep'>
                                 <Tag className='a-tag'>A</Tag>
@@ -155,7 +168,7 @@ const Guest: React.FC = () => {
                 <div>
                     <Title className='title' level={3}>Windows Server</Title>
                     <Divider className='divider' />
-                    <Space direction='vertical'>
+                    <Space direction='vertical' className='files-divider-space'>
                         <Space direction='horizontal' className='files'>
                             <Space direction='horizontal' className='files-deep'>
                                 <Tag className='a-tag'>A</Tag>
@@ -197,7 +210,7 @@ const Guest: React.FC = () => {
                 </div>
             </div>
 
-        </div >
+        </Space >
 
     );
 }

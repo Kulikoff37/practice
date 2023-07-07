@@ -1,8 +1,76 @@
+.content {
+    padding-right : 10px;
+    padding-left  : 10px;
+    padding-bottom: 50px;
+    width         : 100%;
+    text-align    : unset !important;
+    font-family   : Helvetica;
+}
+
+.top-title {
+    text-align: start;
+}
+
+.title-files {
+    color       : #22272D !important;
+    font-size   : 21px !important;
+    font-style  : normal !important;
+    font-weight : bold !important;
+    text-align  : start;
+    line-height : normal !important;
+    align-items : center;
+    display     : flex;
+    padding-left: 10px;
+}
+
+.title-files-system {
+    color       : #22272D !important;
+    font-size   : 21px !important;
+    font-style  : normal !important;
+    font-weight : 400 !important;
+    line-height : normal !important;
+    align-items : center;
+    display     : flex;
+    text-align  : start;
+    padding-left: 10px;
+}
+
+.title-company-name {
+    padding-left: 10px;
+    font-size   : 21px !important;
+    color       : #57606A !important;
+    font-style  : normal !important;
+    font-weight : 400 !important;
+}
+
+.tags-separator {
+    margin-left: 30px;
+}
+
+.gray-divider {
+    color: #979797;
+}
+
 .lime-tag {
     background-color: #CEFF0A;
     color           : #000000;
     border-color    : #979797;
 
+    font-size  : 14px !important;
+    font-style : normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+
+}
+
+.commentaries-box {
+    padding-left: 10px;
+    text-align  : start;
+}
+
+.versions-tags-box {
+    padding-left: 10px;
+    text-align  : start;
 }
 
 .gray-tag {
@@ -11,24 +79,34 @@
     border-color    : #979797;
     width           : 150px;
     text-align      : center;
+
+    font-size  : 14px !important;
+    font-style : normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
 }
 
-.gray-divider {
-    border-color: #979797;
+.top-carousel {
+    display        : flex;
+    justify-content: center;
 }
 
 .carousel {
-    padding: 0px 500px 0px 500px;
+    width: 500px;
 }
 
 .badge {
-    text-align  : unset !important;
-    align-items : start;
-    width       : 100%;
-    padding-left: 60px;
+    display        : flex;
+    justify-content: start;
+    align-items    : center;
+    width          : 100%;
+    padding-left   : 10px;
 }
 
-.divider {}
+.divider {
+    border-color: #979797;
+    margin      : 1px
+}
 
 .dots {
     align-items   : center;
@@ -40,31 +118,43 @@ li::marker {
     content: '-';
 }
 
-.paragraph {
+.top-paragraph-files-commentary {
+    margin      : 10px 0px !important;
+    padding-left: 10px;
     text-align  : start;
-    padding-left: 60px;
 }
 
-.title {
-    text-align  : start;
-    padding-left: 60px;
+.files-divider-space {
+    padding-top: 20px;
+}
+
+.paragraph-space-commentary {
+    color      : #57606A !important;
+    font-size  : 16px !important;
+    font-style : normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+}
+
+.paragraph-files-commentary {
+    color      : #57606A !important;
+    font-size  : 16px !important;
+    font-style : normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
 }
 
 .files {
     margin-bottom: 10px;
     text-align   : start;
     align-items  : unset;
-    padding-left : 60px;
+    padding-left : 10px;
 }
 
 .files-deep {
     border-bottom: solid 1px black;
     border-color : #D6D6D6;
-}
 
-div:where(.css-dev-only-do-not-override-12jzuas).ant-typography,
-:where(.css-dev-only-do-not-override-12jzuas).ant-typography p {
-    margin-bottom: unset !important;
 }
 
 .a-tag {
@@ -90,6 +180,7 @@ div:where(.css-dev-only-do-not-override-12jzuas).ant-typography,
     justify-content: space-between;
     text-align     : end;
     width          : 100%;
+    padding-top    : 30px;
 }
 
 .blue-tag {
@@ -102,4 +193,26 @@ div:where(.css-dev-only-do-not-override-12jzuas).ant-typography,
     background-color: #A0A0A0;
     color           : #fff;
     border-color    : #979797;
+}
+
+:where(.css-dev-only-do-not-override-12jzuas).ant-btn-default:not(:disabled):hover {
+    color       : unset;
+    border-color: unset;
+}
+
+.files-components {
+    text-align: start;
+}
+
+div:where(.css-dev-only-do-not-override-12jzuas).ant-typography,
+:where(.css-dev-only-do-not-override-12jzuas).ant-typography p {
+    margin-bottom: 0px;
+}
+
+.paragraph {
+    color      : #57606A !important;
+    font-size  : 16px !important;
+    font-style : normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
 }

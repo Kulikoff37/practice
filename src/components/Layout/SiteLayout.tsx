@@ -12,6 +12,7 @@ const headerStyle: React.CSSProperties = {
   color: '#979797',
   backgroundColor: '#fff',
   verticalAlign: 'middle',
+  padding: '10px',
 };
 
 const contentStyle: React.CSSProperties = {
@@ -24,7 +25,6 @@ const headerSpaceStyle: React.CSSProperties = {
   border: 'solid 1px',
   borderColor: '#979797',
   width: '100%',
-  margin: '10px',
   padding: '5px',
 };
 
