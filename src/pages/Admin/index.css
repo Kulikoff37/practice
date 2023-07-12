@@ -1,0 +1,63 @@
+.content {
+    padding-right : 10px;
+    padding-left  : 10px;
+    padding-bottom: 50px;
+    width         : 100%;
+    text-align    : unset !important;
+    font-family   : Helvetica;
+}
+
+.radio {
+    background-color: #F5F5F5;
+}
+
+.settings-deep {
+    text-align: start;
+}
+
+.divider {
+    border-color: #979797;
+    margin      : 1px;
+}
+
+.divider-div {
+    height: 100%;
+}
+
+.buttons {
+    padding-right: 20px;
+}
+
+.button-bot {
+    display        : flex;
+    justify-content: space-between;
+    text-align     : end;
+    width          : 100%;
+    padding-top    : 10px;
+}
+
+.button-left {
+    display        : flex;
+    justify-content: space-between;
+    text-align     : end;
+    width          : 100%;
+    padding-top    : 10px;
+}
+
+.blue-button {
+    background-color: #1F75CB;
+    color           : #FFFFFF;
+}
+
+.red-button {
+    background-color: #FF0000;
+    color           : #FFFFFF;
+}
+
+.paragraph {
+    text-align: start !important;
+}
+
+.test {
+    text-align: start;
+}

@@ -16,7 +16,6 @@ const headerStyle: React.CSSProperties = {
 };
 
 const contentStyle: React.CSSProperties = {
-  textAlign: 'center',
   height: 'calc(100vh - 64px)',
   backgroundColor: '#fff',
 };

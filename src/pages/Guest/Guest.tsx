@@ -45,11 +45,6 @@ const Guest: React.FC = () => {
 
     return (
         <Space direction='vertical' className='content'>
-            {/* <div style={{ textAlign: 'left' }}>
-                <pre>
-                    {JSON.stringify(space, null, 2)}
-                </pre>
-            </div> */}
             <div className='badge'>
                 <Image
                     preview={false}
