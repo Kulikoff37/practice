@@ -1,6 +1,7 @@
-import { Space, Divider, Button, Tree, Avatar, Typography, Radio } from 'antd';
+import { Space, Divider, Button, Tree, Avatar, Typography, Radio, Checkbox, Image, Input } from 'antd';
 import { DownOutlined, UserOutlined } from '@ant-design/icons';
 import type { DataNode, TreeProps } from 'antd/es/tree';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import React from 'react';
 import './index.css'
 
@@ -77,9 +78,27 @@ const treeData: DataNode[] = [
     },
 ];
 
+
+
 const Admin: React.FC = () => {
     const onSelect: TreeProps['onSelect'] = (selectedKeys, info) => {
         console.log('selected', selectedKeys, info);
+    };
+
+    const onChangeCheckBox1 = (e: CheckboxChangeEvent) => {
+        console.log(`checked = ${e.target.checked}`);
+    };
+
+    const onChangeCheckBox2 = (e: CheckboxChangeEvent) => {
+        console.log(`checked = ${e.target.checked}`);
+    };
+
+    const onChangeCheckBox3 = (e: CheckboxChangeEvent) => {
+        console.log(`checked = ${e.target.checked}`);
+    };
+
+    const onChangeInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        console.log('Change:', e.target.value);
     };
 
     return (
@@ -90,8 +109,8 @@ const Admin: React.FC = () => {
                 <Radio.Button className='radio' value="settings">Настройки</Radio.Button>
             </Radio.Group>
             <Divider className='divider' />
-            <Space direction='vertical'>
-                <Space direction='horizontal'>
+            <Space direction='vertical' className='all-contents'>
+                <Space direction='horizontal' className='all-contents'>
                     <Space direction='vertical'>
                         <Tree
                             showLine
@@ -112,17 +131,33 @@ const Admin: React.FC = () => {
                     <div className='divider-div'>
                         <Divider type="vertical" className='divider' />
                     </div>
-                    <Space direction='vertical'>
-                        <Space direction='horizontal'>
-                            <Avatar shape="square" size={64} icon={<UserOutlined />} />
-                            <Button>Выберите файл</Button>
-                        </Space>
-                        <Space className='settings-deep' direction='vertical'>
+                    <div className='settings'>
+                        <Space direction='vertical' className='settings' >
+                            <div className='img-div'>
+                                <Image className='img-rect'
+                                    preview={false}
+                                    src={'/src/pages/Admin/static/rect.svg'}
+                                />
+                            </div>
                             <Space direction='horizontal'>
-                                <Paragraph className='paragraph'>Имя</Paragraph>
+                                <Avatar shape="square" size={64} icon={<UserOutlined />} />
+                                <Space direction='vertical'>
+                                    <div></div>
+                                    <Button>Выберите файл</Button>
+                                </Space>
+
                             </Space>
+                            <Space className='settings-deep' direction='vertical'>
+                                <Space direction='horizontal' className='top-settings'>
+                                    <Paragraph className='paragraph'>Имя</Paragraph>
+                                    <Checkbox onChange={onChangeCheckBox1}>Заблокированный</Checkbox>
+                                </Space>
+                            </Space>
+                            <Input showCount maxLength={40} onChange={onChangeInput} />
+                            <Checkbox onChange={onChangeCheckBox2}>Может управлять администраторами</Checkbox>
+                            <Checkbox onChange={onChangeCheckBox3}>Может управлять администраторами пространств</Checkbox>
                         </Space>
-                    </Space>
+                    </div>
                 </Space>
             </Space>
             <Divider className='divider' />

@@ -11,8 +11,37 @@
     background-color: #F5F5F5;
 }
 
+.img-rect {
+    width: 100%;
+}
+
+.settings {
+    width: 100%;
+}
+
+.all-contents-deep {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    gap            : 8px;
+}
+
+.all-contents {
+    width      : 100%;
+    align-items: unset;
+}
+
 .settings-deep {
-    text-align: start;
+    text-align     : start;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.top-settings {
+    display        : flex;
+    justify-content: space-between;
+    width          : 100%;
+    vertical-align : middle;
 }
 
 .divider {
@@ -21,7 +50,16 @@
 }
 
 .divider-div {
+    height     : 100%;
+    padding-top: 10px;
+}
+
+:where(.css-dev-only-do-not-override-12jzuas).ant-divider-vertical {
     height: 100%;
+}
+
+.img-div {
+    width: 100%;
 }
 
 .buttons {
